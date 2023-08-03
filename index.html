@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Try-Z Mapping Overlay NEXT</title>
+<link rel="stylesheet" href="style.css">
+<script src="deps/reconnecting-websocket.min.js"></script>
+<!-- <script type="module" src="deps/osujs.js"></script> -->
+<script>
+    window.ReconnectingWebSocket = ReconnectingWebSocket;
+</script>
+<script type="module" src="index.js" defer></script>
+
+<body>
+    <div class="App">
+        <div class="nowPlaying">
+            <div class="metadata">
+                <div class="bg" id="bg"></div>
+                <div class="artistTitle">
+                    <div id="artist"></div>
+                    <div id="title"></div>
+                </div>
+                <div class="diffMapper">
+                    <div class="line">
+                        <div class="label">Difficulty: </div>
+                        <div id="difficulty"></div>
+                    </div>
+                    <div class="line">
+                        <div class="label">Mapper: </div>
+                        <div id="mapper"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="label">CS</div>
+                    <div class="value" id="CS">0.0</div>
+                </div>
+                /
+                <div class="stat">
+                    <div class="label">AR</div>
+                    <div class="value" id="AR">0.0</div>
+                </div>
+                /
+                <div class="stat">
+                    <div class="label">OD</div>
+                    <div class="value" id="OD">0.0</div>
+                </div>
+                /
+                <div class="stat">
+                    <div class="label">HP</div>
+                    <div class="value" id="HP">0.0</div>
+                </div>
+                <div class="stat starRating">
+                    <div class="label">Star Rating</div>
+                    <div class="value" id="SR">0.0*</div>
+                </div>
+            </div>
+        </div>
+        <div class="sideBar">
+            <div class="timingStats">
+                <div class="bigStat">
+                    <div class="label">Current BPM</div>
+                    <div class="bigValue" id="BPM">0.00</div>
+                </div>
+                <div class="bigStat">
+                    <div class="label">Slider Velocity</div>
+                    <div class="svContainer">
+                        <div class="bigValue" id="SV">0.00</div>
+                        <div class="baseSV" id="baseSV">x0.00 Base</div>
+                    </div>
+                </div>
+                <div class="bigStat">
+                    <div class="label">Circles Count</div>
+                    <div class="bigValue" id="CC">0</div>
+                </div>
+                <div class="bigStat">
+                    <div class="label">Sliders Count</div>
+                    <div class="bigValue" id="SC">0</div>
+                </div>
+                <div class="bigStat">
+                    <div class="label">Maximum Combo</div>
+                    <div class="bigValue" id="MC">0x</div>
+                </div>
+                <div class="bigStat">
+                    <div class="label">PP if SS</div>
+                    <div class="bigValue" id="PP">0pp</div>
+                </div>
+            </div>
+            <div class="chat">CHAT</div>
+        </div>
+
+    </div>
+</body>
+
+</html>
